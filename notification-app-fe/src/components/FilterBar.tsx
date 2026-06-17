@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Box, Chip, Typography, useMediaQuery, useTheme } from '@mui/material';
+import type { ChipProps } from '@mui/material';
 import { NotificationType } from '../types/notification';
 import { logger } from '../middleware/logger';
 
@@ -21,7 +22,7 @@ const FILTER_OPTIONS: Array<NotificationType | 'All'> = ['All', 'Placement', 'Re
 function getFilterChipColor(
   filterType: NotificationType | 'All',
   isActive: boolean
-): string {
+): ChipProps['color'] {
   if (!isActive) return 'default';
 
   switch (filterType) {

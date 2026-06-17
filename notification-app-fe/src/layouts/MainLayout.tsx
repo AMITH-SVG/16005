@@ -34,7 +34,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children, totalNotificat
 
   const currentTab = location.pathname === '/priority' ? 1 : 0;
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     const path = newValue === 0 ? '/' : '/priority';
     logger.navigation(location.pathname, path);
     navigate(path);

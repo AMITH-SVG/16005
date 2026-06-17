@@ -46,7 +46,7 @@ export const PaginationBar: React.FC<PaginationBarProps> = ({
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
   const totalPages = calculateTotalPages(totalItems, limit);
 
-  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     logger.paginationChange(value, limit);
     onPageChange(value);
   };

@@ -3,7 +3,7 @@
  * Main app router and layout
  */
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import MainLayout from './layouts/MainLayout';
@@ -11,7 +11,6 @@ import AllNotifications from './pages/AllNotifications';
 import PriorityNotifications from './pages/PriorityNotifications';
 import { logger } from './middleware/logger';
 import { notificationService } from './api/notificationService';
-import { Notification } from './types/notification';
 
 /**
  * Create Material-UI theme

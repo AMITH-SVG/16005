@@ -52,7 +52,7 @@ export const PriorityNotifications: React.FC = () => {
     });
   };
 
-  const handleTopNChange = (event: React.MouseEvent<HTMLElement>, newValue: number | null) => {
+  const handleTopNChange = (_event: React.MouseEvent<HTMLElement>, newValue: number | null) => {
     if (newValue !== null) {
       logger.interaction('top_n_changed', { value: newValue });
       setTopN(newValue);
